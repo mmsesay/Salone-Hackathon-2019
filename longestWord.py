@@ -1,13 +1,24 @@
-#!/usr/bin/python3
+#!/usr/bin/python
 
-wordPack = ["hello", "worlds", "hi", "bye"]
+# function declaration
+def longestWordCheck():
+    """ This function returns the longest word in the list of string.
+    If their is a match length of words, all matches will be return. """ 
 
-# for word in wordPack:
+    # list of words definition
+    wordPack = ["hello", "world", "hi", "bye"]
 
-#     if word[word] :
-#         max(word)
+    # mapping every word in the list to the length function and returning
+    #  the max of them
+    maxWord = max(map(len,wordPack))
 
-m=max(map(len,wordPack))
-print([x for x in wordPack if len(x) == m])
+    # looping through the words
+    for word in wordPack:
+        # checking if the length of each word matches the maxmimum word above
+        if len(word) == maxWord :
+            print(word)  # print the word(s)
 
-# print(max(wordPack, key=len))
+if __name__=="__main__":
+    # strating the longestWordCheck function here
+    longestWordCheck()
+    
